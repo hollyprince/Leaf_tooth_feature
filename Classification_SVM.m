@@ -91,17 +91,11 @@ disp(cmd);
 [predict_label, accuracy, dec_values]=svmpredict(test_group,test,model);
 
 %打印测试分类结果
-% figure;
-% hold on;
-% plot(test_group,'o');
-% plot(predict_label,'r*');
-% legend('实际测试集分类','预测测试集分类');
-% title('测试集的实际分类和预测分类图','FontSize',10);
+figure;
+hold on;
+plot(test_group,'o');
+plot(predict_label,'r*');
+legend('实际测试集分类','预测测试集分类');
+title('测试集的实际分类和预测分类图','FontSize',10);
 
 end
-% 
-% %训练模型
-% model = svmtrain(label,data22); 
-% 
-% %验证精确度
-% [predict_label, accuracy, decision_values] = svmpredict(label3,data33,model);
